@@ -1,0 +1,1 @@
+Set up hercules as a downloadable Scrapy package 6-9-2021
