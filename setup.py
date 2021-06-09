@@ -13,7 +13,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/johnson2427/hercules",
     packages=find_packages(),  # needs a folder with __init__()
-    # py_modules=["helloworld"], # use if you only have modules
+    py_modules=["resultsdb_main"],  # use if you only have modules
     # package_dir={'': 'src'},
     classifiers=[
         "Programming Language :: Python :: 3",
