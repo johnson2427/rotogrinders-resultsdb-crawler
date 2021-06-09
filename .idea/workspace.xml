@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbb21cb2-2fa0-4f51-8c0f-3824547ff302" name="Default Changelist" comment="added resultsdb_main as py_module">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    <list default="true" id="fbb21cb2-2fa0-4f51-8c0f-3824547ff302" name="Default Changelist" comment="added hercules as a package">
+      <change beforePath="$PROJECT_DIR$/hercules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/hercules/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623261901409</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added hercules as a package">
+      <created>1623264896654</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623264896654</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +127,7 @@
     <MESSAGE value="Set up as downloadable package with setup.py" />
     <MESSAGE value="updated readme" />
     <MESSAGE value="added resultsdb_main as py_module" />
-    <option name="LAST_COMMIT_MESSAGE" value="added resultsdb_main as py_module" />
+    <MESSAGE value="added hercules as a package" />
+    <option name="LAST_COMMIT_MESSAGE" value="added hercules as a package" />
   </component>
 </project>
