@@ -1,7 +1,11 @@
 # hercules
 Web Scraping Software Package
 
+
+
 ##How to install packages:
+
+
 ####pipenv is required for this package
 
 
@@ -12,8 +16,14 @@ Web Scraping Software Package
     (hercules-[vm])(base) user@comp:~/hercules$ pip install -e .
 
 
+
 ##Installation of this package
+
+
+
 ####Deployment Install:
+
+
 
     $ pip install git+https://github.com/johnson2427/hercules.git
 
