@@ -7,11 +7,10 @@ from selenium.webdriver.chrome.options import Options
 import os
 import time
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta, date
 import requests
 import json
 from pytz import timezone
-import config
 
 
 def timezone_conversion(scrape_date):
@@ -28,6 +27,7 @@ class ResultsSpiderSelenium(scrapy.Spider):
     name = 'results_selenium'
     allowed_domains = ['www.rotogrinders.com/resultsdb/']
     start_urls = ['https://rotogrinders.com/resultsdb/site/draftkings/date/2021-04-01/sport/mlb/']
+    yesterday = date.today() - timedelta(days=1)
 
     def __init__(self):
         chrome_options = Options()
@@ -35,7 +35,8 @@ class ResultsSpiderSelenium(scrapy.Spider):
         chrome_options.add_argument("--disable-popup-blocking")
         chrome_path = "/" + os.getcwd().split('/')[1] + "/" + os.getcwd().split('/')[2] + "/anaconda3/bin/chromedriver"
         self.driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
-        self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range(config.RESULTS_DATES, config.RESULTS_DATES)]
+        self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range(date.today() - timedelta(days=1),
+                                                                    date.today() - timedelta(days=1))]
         self.headers = {
             'authority': 'resultsdb-api.rotogrinders.com',
             'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"',

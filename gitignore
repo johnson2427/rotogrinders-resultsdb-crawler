@@ -1,0 +1,5 @@
+hercules/bin
+hercules/include
+hercules/lib
+hercules/lib64
+pyvenv.cfg

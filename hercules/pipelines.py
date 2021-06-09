@@ -8,6 +8,7 @@
 import logging
 from pymongo import MongoClient
 
+
 class MongodbPipeline(object):
 
     def __init__(self):

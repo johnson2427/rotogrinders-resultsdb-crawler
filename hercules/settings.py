@@ -9,10 +9,10 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'resultsdb'
+BOT_NAME = 'hercules'
 
-SPIDER_MODULES = ['resultsdb.spiders']
-NEWSPIDER_MODULE = 'resultsdb.spiders'
+SPIDER_MODULES = ['hercules.spiders']
+NEWSPIDER_MODULE = 'hercules.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -62,7 +62,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'resultsdb.pipelines.MongodbPipeline': 300,
+   'hercules.pipelines.MongodbPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
