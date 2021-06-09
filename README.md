@@ -3,10 +3,10 @@ Web Scraping Software Package
 
 
 
-##How to install packages:
+## How to install packages:
 
 
-####pipenv is required for this package
+#### pipenv is required for this package
 
 
     (base) user@comp:~/hercules$ pipenv install
@@ -17,11 +17,11 @@ Web Scraping Software Package
 
 
 
-##Installation of this package
+## Installation of this package
 
 
 
-####Deployment Install:
+#### Deployment Install:
 
 
 
