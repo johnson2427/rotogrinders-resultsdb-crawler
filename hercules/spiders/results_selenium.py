@@ -33,8 +33,10 @@ class ResultsSpiderSelenium(scrapy.Spider):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-popup-blocking")
-        chrome_path = "/" + os.getcwd().split('/')[1] + "/" + os.getcwd().split('/')[2] + "/anaconda3/bin/chromedriver"
+        chrome_options.add_argument('--no-sandbox')
+        chrome_path = "/home/blake/anaconda3/bin/chromedriver"
         self.driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
+        # self.driver = webdriver.Chrome(options=chrome_options)
         self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range(date.today() - timedelta(days=1),
                                                                     date.today() - timedelta(days=1))]
         self.headers = {

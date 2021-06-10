@@ -13,7 +13,7 @@ class MongodbPipeline(object):
 
     def __init__(self):
         self.mongo_uri = 'mongodb://localhost:27017'
-        self.mongo_db = 'DraftKings_Contests'
+        self.mongo_db = 'DraftKings_Test'
 
     def open_spider(self, spider):
         self.client = MongoClient(self.mongo_uri)
