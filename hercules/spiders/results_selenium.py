@@ -27,18 +27,16 @@ class ResultsSpiderSelenium(scrapy.Spider):
     name = 'results_selenium'
     allowed_domains = ['www.rotogrinders.com/resultsdb/']
     start_urls = ['https://rotogrinders.com/resultsdb/site/draftkings/date/2021-04-01/sport/mlb/']
-    yesterday = date.today() - timedelta(days=1)
 
-    def __init__(self):
+    def __init__(self, date1=os.getenv("BUILD_DATE_1"), date2=os.getenv("BUILD_DATE_2")):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-popup-blocking")
         chrome_options.add_argument('--no-sandbox')
-        chrome_path = "/home/blake/anaconda3/bin/chromedriver"
-        self.driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
-        # self.driver = webdriver.Chrome(options=chrome_options)
-        self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range(date.today() - timedelta(days=1),
-                                                                    date.today() - timedelta(days=1))]
+        # chrome_path = "/home/blake/anaconda3/bin/chromedriver"
+        # self.driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
+        self.driver = webdriver.Chrome(options=chrome_options)
+        self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range(date1, date2)]
         self.headers = {
             'authority': 'resultsdb-api.rotogrinders.com',
             'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"',

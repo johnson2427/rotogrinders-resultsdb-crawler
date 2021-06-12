@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbb21cb2-2fa0-4f51-8c0f-3824547ff302" name="Default Changelist" comment="added hercules as a package">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="fbb21cb2-2fa0-4f51-8c0f-3824547ff302" name="Default Changelist" comment="Fails in docker, may be permission issue trying to connect to mongodb.&#10;Works from local host">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hercules/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/hercules/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hercules/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hercules/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hercules/spiders/results_selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/hercules/spiders/results_selenium.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623265196112</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fails in docker, may be permission issue trying to connect to mongodb.&#10;Works from local host">
+      <created>1623331772211</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623331772211</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +152,7 @@
     <MESSAGE value="updated readme" />
     <MESSAGE value="added resultsdb_main as py_module" />
     <MESSAGE value="added hercules as a package" />
-    <option name="LAST_COMMIT_MESSAGE" value="added hercules as a package" />
+    <MESSAGE value="Fails in docker, may be permission issue trying to connect to mongodb.&#10;Works from local host" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fails in docker, may be permission issue trying to connect to mongodb.&#10;Works from local host" />
   </component>
 </project>
