@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbb21cb2-2fa0-4f51-8c0f-3824547ff302" name="Default Changelist" comment="Fixed due to ResultsDB changes. Can only paginate 10 pages">
+    <list default="true" id="fbb21cb2-2fa0-4f51-8c0f-3824547ff302" name="Default Changelist" comment="Ready for live">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hercules/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/hercules/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hercules/spiders/results_selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/hercules/spiders/results_selenium.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +34,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -74,7 +82,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623190905814</updated>
-      <workItem from="1626673922310" duration="68000" />
+      <workItem from="1626673922310" duration="100000" />
+      <workItem from="1627918879979" duration="13000" />
+      <workItem from="1630509254132" duration="57000" />
+      <workItem from="1638198197439" duration="3582000" />
     </task>
     <task id="LOCAL-00001" summary="Set up as downloadable package with setup.py">
       <created>1623261084733</created>
@@ -153,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625110141746</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Ready for live">
+      <created>1626674003220</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1626674003220</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +197,10 @@
     <MESSAGE value="Fails in docker, may be permission issue trying to connect to mongodb.&#10;Works from local host" />
     <MESSAGE value="Fully Functional" />
     <MESSAGE value="Fixed due to ResultsDB changes. Can only paginate 10 pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed due to ResultsDB changes. Can only paginate 10 pages" />
+    <MESSAGE value="Ready for live" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready for live" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hercules$resultsdb_main.coverage" NAME="resultsdb_main Coverage Results" MODIFIED="1638201029196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hercules" />
   </component>
 </project>

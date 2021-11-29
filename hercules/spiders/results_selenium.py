@@ -33,11 +33,11 @@ class ResultsSpiderSelenium(scrapy.Spider):
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-popup-blocking")
         chrome_options.add_argument('--no-sandbox')
-        # TESTING *********************************************** chrome_path = "/home/blake/anaconda3/bin/chromedriver"
-        # TESTING ****************** self.driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
+        # chrome_path = "/home/blake/anaconda3/bin/chromedriver"
+        # self.driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
         self.driver = webdriver.Chrome(options=chrome_options)
         self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range(date1, date2)]
-        # TESTING ***************** self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range('20210629', '20210629')]
+        # self.dates = [d.strftime('%Y-%m-%d') for d in pd.date_range('20180802', '20180802')]
         self.headers = {
             'authority': 'resultsdb-api.rotogrinders.com',
             'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"',
@@ -97,21 +97,24 @@ class ResultsSpiderSelenium(scrapy.Spider):
     def paginated_standings_information(self, contest_key):
         i = 0
         standings = self.standings_information(contest_key=contest_key, index=i)
-        if 'prize' in standings['entries'][-1].keys():
-            while standings['entries'][-1] != 'Anonymous':
-                i = i + 1
-                paginated_standings = self.standings_information(contest_key, i)
-                if not paginated_standings:
-                    return standings
-                paginated_standings = paginated_standings['entries']
-                for j in range(len(paginated_standings)):
-                    standings['entries'].append(paginated_standings[j])
-                    if i > 800:
+        try:
+            if 'prize' in standings['entries'][-1].keys():
+                while standings['entries'][-1] != 'Anonymous':
+                    i = i + 1
+                    paginated_standings = self.standings_information(contest_key, i)
+                    if not paginated_standings:
                         return standings
-                    if 'prize' not in paginated_standings[j].keys():
-                        return standings
-        else:
-            return standings
+                    paginated_standings = paginated_standings['entries']
+                    for j in range(len(paginated_standings)):
+                        standings['entries'].append(paginated_standings[j])
+                        if i > 800:
+                            return standings
+                        if 'prize' not in paginated_standings[j].keys():
+                            return standings
+            else:
+                return standings
+        except IndexError:
+            return None
 
     def ownership_information(self, contest_id):
         params = (
