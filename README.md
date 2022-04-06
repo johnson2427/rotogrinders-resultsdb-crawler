@@ -1,11 +1,17 @@
-# hercules
+# rotogrinders-resultsdb-crawler
+## This is a decomissioned repository
+Rotogrinders recently changed their results-db site, making this software package obsolete.
+It is almost certain that this can be used as a base to pull data from the current resultsdb
+to a mongo database (you'll have to change the name of the mongo server).
+Since resultsdb has changed so radically, our team has found that this software package is
+not required to keep around.
+
 #### Web Scraping Software Package
 #### ONLY TESTED ON LINUX MACHINES
 
-
 ## How to install packages:
 
-    $ pip install git+https://github.com/johnson2427/hercules.git
+    $ pip install git+https://github.com/johnson2427/rotogrinders-resultsdb-crawler.git
 
 #### pipenv is required for this package
 
@@ -38,7 +44,7 @@
 
 #### Run Docker Using ENV variables:
 
-    docker run -e "BUILD_DATE_1='<date1>'" -e "BUILD_DATE_2='<date2>'" hercules
+    docker run -e "BUILD_DATE_1='<date1>'" -e "BUILD_DATE_2='<date2>'" rotogrinders-resultsdb-crawler
 
 #### Both <dates> can be the same value.
 #### Dates can be in any format
