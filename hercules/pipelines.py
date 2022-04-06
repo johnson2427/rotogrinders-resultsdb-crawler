@@ -12,8 +12,7 @@ from pymongo import MongoClient
 class MongodbPipeline(object):
 
     def __init__(self):
-        # self.mongo_uri = 'mongodb://localhost:27017'
-        self.mongo_uri = 'mongodb://apollo:27017'
+        self.mongo_uri = 'mongodb://localhost:27017'
         self.mongo_db = 'Rotogrinders_Contests'
 
     def open_spider(self, spider):
